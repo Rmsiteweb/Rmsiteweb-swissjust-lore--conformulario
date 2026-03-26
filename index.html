@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Swiss Just · Lore Liffourrena</title>
+<meta name="description" content="Consultora oficial Swiss Just Argentina — Lore Liffourrena.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#faf8f4; --sand:#f0ebe0; --ivory:#f7f3ec;
+  --forest:#2d5016; --sage:#5a7a3a; --sage-light:#8fad6a;
+  --gold:#c8a96e; --bark:#3a2a1a; --stone:#7a7060; --mist:#e8ede0;
+  --white:#ffffff; --wa:#25d366;
+  --shadow:rgba(45,80,22,0.12); --shadow-md:rgba(45,80,22,0.20);
+  --shadow-gold:rgba(200,169,110,0.25);
+  --radius:14px; --radius-lg:20px; --max-w:520px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{height:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;
+  background-image:radial-gradient(ellipse 60% 40% at 10% 5%,rgba(143,173,106,.09) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 50% at 90% 95%,rgba(200,169,110,.09) 0%,transparent 55%)}
+
+/* TOP BAR */
+.topbar{width:100%;background:var(--forest);padding:7px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:8px}
+.topbar-brand{font-size:10.5px;color:rgba(255,255,255,.6);letter-spacing:1.5px;
+  text-transform:uppercase;font-weight:300;white-space:nowrap}
+.topbar-social{display:flex;gap:6px;flex-shrink:0}
+.top-social{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,.8);
+  text-decoration:none;font-size:11px;padding:3px 9px;border-radius:20px;
+  border:1px solid rgba(255,255,255,.15);transition:all .18s;white-space:nowrap}
+.top-social:hover{background:rgba(255,255,255,.13);color:#fff}
+.top-social.ig:hover{border-color:#bc1888}
+.top-social.wa:hover{border-color:var(--wa)}
+
+/* HEADER */
+.header{width:100%;max-width:var(--max-w);padding:18px 20px 10px;
+  display:flex;align-items:center;gap:13px}
+.header-logo{position:relative;flex-shrink:0}
+.logo-circle{width:50px;height:50px;background:linear-gradient(135deg,var(--forest),var(--sage));
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:23px;box-shadow:0 5px 18px var(--shadow)}
+.logo-badge{position:absolute;bottom:-2px;right:-2px;width:17px;height:17px;
+  background:var(--gold);border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:9px;color:#fff;border:2px solid var(--cream)}
+.header-brand h1{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;
+  color:var(--bark);line-height:1;letter-spacing:.3px}
+.header-sub{font-size:9.5px;color:var(--gold);letter-spacing:2.5px;
+  text-transform:uppercase;font-weight:300;margin-top:3px}
+.header-right{margin-left:auto;text-align:right}
+.online-pill{display:inline-flex;align-items:center;gap:5px;
+  background:rgba(90,122,58,.11);border:1px solid rgba(90,122,58,.22);
+  border-radius:20px;padding:3px 10px;font-size:11px;color:var(--sage)}
+.pulse-dot{width:6px;height:6px;background:var(--sage-light);border-radius:50%;
+  animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.6)}}
+.consultant-name{font-size:11px;color:var(--stone);margin-top:4px;font-weight:300}
+.consultant-name b{color:var(--forest);font-weight:500}
+
+/* SOCIAL ROW */
+.social-row{width:100%;max-width:var(--max-w);padding:0 20px 12px;display:flex;gap:8px}
+.social-btn{flex:1;padding:9px 10px;border-radius:11px;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:500;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  text-decoration:none;transition:all .18s}
+.btn-consulta{background:linear-gradient(135deg,var(--forest),var(--sage));color:#fff}
+.btn-consulta:hover{transform:translateY(-1px);box-shadow:0 5px 16px var(--shadow-md)}
+.btn-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.btn-ig:hover{transform:translateY(-1px);box-shadow:0 5px 15px rgba(188,24,136,.3)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#1ebc5b;transform:translateY(-1px);box-shadow:0 5px 15px rgba(37,211,102,.3)}
+
+/* CHAT */
+.chat-window{width:100%;max-width:var(--max-w);height:480px;background:var(--white);
+  border-radius:var(--radius-lg);
+  box-shadow:0 16px 50px var(--shadow),0 2px 8px rgba(0,0,0,.04);
+  border:1px solid rgba(200,169,110,.16);display:flex;flex-direction:column;
+  overflow:hidden;margin-bottom:10px}
+.messages{flex:1;overflow-y:auto;padding:18px 14px;display:flex;
+  flex-direction:column;gap:12px;scroll-behavior:smooth}
+.messages::-webkit-scrollbar{width:3px}
+.messages::-webkit-scrollbar-thumb{background:var(--mist);border-radius:3px}
+
+/* MENSAJES */
+.msg{display:flex;gap:8px;animation:fadeUp .24s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.msg.bot{align-self:flex-start;max-width:92%}
+.msg.user{align-self:flex-end;flex-direction:row-reverse;max-width:82%}
+.avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;margin-top:3px;
+  display:flex;align-items:center;justify-content:center;font-size:13px}
+.msg.bot .avatar{background:linear-gradient(135deg,var(--forest),var(--sage))}
+.msg.user .avatar{background:var(--mist)}
+.bubble{padding:9px 14px;border-radius:16px;font-size:13.5px;line-height:1.65;color:var(--bark)}
+.msg.bot .bubble{background:var(--ivory);border:1px solid rgba(200,169,110,.14);border-bottom-left-radius:4px}
+.msg.user .bubble{background:var(--forest);color:#fff;border-bottom-right-radius:4px}
+.bubble a{color:var(--sage);font-weight:500;text-decoration:none}
+.bubble a:hover{text-decoration:underline}
+.msg.user .bubble a{color:rgba(255,255,255,.85)}
+
+/* PRODUCT CARDS */
+.product-scroll{display:flex;gap:9px;overflow-x:auto;padding:4px 2px 8px;scrollbar-width:none}
+.product-scroll::-webkit-scrollbar{display:none}
+.p-card{min-width:135px;max-width:135px;background:var(--white);
+  border:1px solid rgba(200,169,110,.2);border-radius:var(--radius);
+  padding:11px 10px;cursor:pointer;transition:all .18s;flex-shrink:0}
+.p-card:hover{transform:translateY(-3px);box-shadow:0 9px 24px var(--shadow-gold);border-color:var(--gold)}
+.p-emoji{font-size:27px;margin-bottom:6px;line-height:1}
+.p-cat{font-size:9px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:3px}
+.p-name{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;
+  color:var(--bark);line-height:1.3;margin-bottom:4px}
+.p-desc{font-size:10.5px;color:var(--stone);line-height:1.4;margin-bottom:7px}
+.p-add{width:100%;padding:6px 0;background:var(--forest);color:#fff;border:none;
+  border-radius:8px;font-size:11px;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .15s}
+.p-add:hover{background:var(--sage)}
+
+/* QUICK REPLIES */
+.quick-wrap{display:flex;flex-wrap:wrap;gap:7px;padding:3px 0 5px}
+.qr{padding:7px 13px;background:var(--white);border:1px solid rgba(90,122,58,.28);
+  border-radius:20px;font-size:12.5px;color:var(--sage);cursor:pointer;
+  font-family:'DM Sans',sans-serif;transition:all .16s;user-select:none}
+.qr:hover{background:var(--forest);color:#fff;border-color:var(--forest);
+  transform:translateY(-1px);box-shadow:0 4px 10px var(--shadow)}
+.qr:disabled{opacity:.45;cursor:default;transform:none;box-shadow:none}
+
+/* TYPING */
+.typing .bubble{padding:12px 15px}
+.dots{display:flex;gap:4px;align-items:center}
+.dots span{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:bounce 1.1s infinite}
+.dots span:nth-child(2){animation-delay:.18s}
+.dots span:nth-child(3){animation-delay:.36s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+
+/* INPUT */
+.input-row{padding:11px 13px;border-top:1px solid rgba(200,169,110,.1);
+  display:flex;gap:9px;align-items:center;background:var(--ivory)}
+.input-row input{flex:1;padding:10px 16px;border:1px solid rgba(90,122,58,.2);
+  border-radius:22px;font-size:13.5px;font-family:'DM Sans',sans-serif;
+  color:var(--bark);background:var(--white);outline:none;transition:border-color .18s}
+.input-row input:focus{border-color:var(--sage)}
+.input-row input::placeholder{color:#bbb}
+.send-btn{width:38px;height:38px;border-radius:50%;border:none;background:var(--forest);
+  color:#fff;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 10px var(--shadow);transition:all .16s}
+.send-btn:hover{background:var(--sage);transform:scale(1.07)}
+.send-btn:active{transform:scale(.93)}
+.send-btn:disabled{opacity:.45;cursor:default}
+
+/* BOTTOM BAR */
+.bottom-bar{width:100%;max-width:var(--max-w);padding:0 4px 8px;
+  display:flex;justify-content:space-between;align-items:center;gap:8px}
+.catalog-link{font-size:12px;color:var(--sage);text-decoration:none;
+  border-bottom:1px solid rgba(90,122,58,.22);transition:color .15s;white-space:nowrap}
+.catalog-link:hover{color:var(--forest)}
+.bottom-right{display:flex;gap:8px;align-items:center}
+.event-btn{display:flex;align-items:center;gap:7px;
+  background:linear-gradient(135deg,var(--forest),var(--sage));
+  color:#fff;border:none;border-radius:20px;padding:7px 14px;font-size:12.5px;
+  font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;
+  box-shadow:0 4px 14px var(--shadow);transition:all .18s}
+.event-btn:hover{transform:translateY(-1px)}
+.red-dot{width:8px;height:8px;background:#ff3b3b;border-radius:50%;flex-shrink:0;
+  box-shadow:0 0 0 3px rgba(255,59,59,.22);animation:pulse 1.5s ease-in-out infinite}
+.shop-btn{display:flex;align-items:center;gap:6px;background:var(--gold);color:#fff;
+  text-decoration:none;border-radius:20px;padding:7px 15px;font-size:12.5px;
+  font-weight:500;font-family:'DM Sans',sans-serif;box-shadow:0 4px 14px var(--shadow-gold);
+  transition:all .18s;white-space:nowrap}
+.shop-btn:hover{background:var(--bark);transform:translateY(-1px)}
+
+/* ADMIN ACCESS */
+.admin-access{font-size:11px;color:#ccc;cursor:pointer;user-select:none;
+  padding:8px 0 16px;letter-spacing:1px;transition:color .2s}
+.admin-access:hover{color:var(--stone)}
+
+/* LINK BUTTONS */
+.link-btn{display:inline-block;margin-top:10px;padding:9px 18px;border-radius:10px;
+  text-decoration:none;font-weight:500;font-size:13px;transition:all .16s;color:#fff}
+.link-btn.green{background:var(--forest)}
+.link-btn.green:hover{background:var(--sage)}
+.link-btn.purple{background:linear-gradient(135deg,#f09433,#bc1888)}
+.link-btn.purple:hover{opacity:.88}
+.link-btn.teal{background:var(--wa)}
+.link-btn.teal:hover{background:#1ebc5b}
+
+/* MODALES */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(15,25,10,.62);
+  backdrop-filter:blur(5px);z-index:1000;align-items:center;justify-content:center;padding:16px}
+.modal-overlay.open{display:flex}
+.modal-card{background:var(--white);border-radius:var(--radius-lg);padding:26px 22px;
+  width:100%;max-width:420px;position:relative;max-height:92vh;overflow-y:auto;
+  animation:modalIn .26s ease}
+@keyframes modalIn{from{opacity:0;transform:scale(.93) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-close{position:absolute;top:12px;right:14px;background:var(--sand);border:none;
+  width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:12px;color:var(--stone);
+  transition:background .15s;z-index:10}
+.modal-close:hover{background:var(--mist)}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;
+  color:var(--bark);margin-bottom:8px;line-height:1.2;padding-right:28px}
+.modal-desc{font-size:12.5px;color:var(--stone);margin-bottom:16px;line-height:1.5}
+.modal-cta{width:100%;background:var(--forest);color:#fff;border:none;border-radius:11px;
+  padding:12px;font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;
+  cursor:pointer;transition:background .15s;margin-top:6px}
+.modal-cta:hover{background:var(--sage)}
+.btn-ghost{width:100%;background:transparent;color:var(--stone);
+  border:1px solid rgba(0,0,0,.1);border-radius:11px;padding:9px;font-size:13px;
+  font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .15s;margin-top:7px}
+.btn-ghost:hover{background:var(--sand)}
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.field label{font-size:11.5px;color:var(--stone);font-weight:500}
+.field input,.field select,.field textarea{border:1px solid rgba(90,122,58,.22);border-radius:9px;
+  padding:9px 12px;font-size:13.5px;font-family:'DM Sans',sans-serif;color:var(--bark);
+  background:var(--white);outline:none;transition:border-color .18s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sage)}
+.check-row{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--stone);
+  line-height:1.4;margin-bottom:14px;cursor:pointer}
+.check-row input{margin-top:2px;accent-color:var(--forest);flex-shrink:0}
+.confirm-icon{font-size:48px;text-align:center;margin-bottom:12px}
+.confirm-info{background:var(--ivory);border-radius:10px;padding:11px 15px;font-size:13px;
+  color:var(--bark);display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+
+/* CONSULTA MODAL */
+.consulta-card{border-top:4px solid var(--sage)}
+.consulta-header{display:flex;gap:13px;align-items:flex-start;margin-bottom:20px}
+.consulta-icon-wrap{width:46px;height:46px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--forest),var(--sage));border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+  box-shadow:0 4px 14px var(--shadow)}
+.productos-grid{display:flex;flex-wrap:wrap;gap:6px;padding:4px 0}
+.prod-check{display:flex;align-items:center;gap:5px;padding:5px 11px;
+  border:1px solid rgba(90,122,58,.25);border-radius:20px;font-size:12px;
+  color:var(--bark);cursor:pointer;transition:all .16s;user-select:none;
+  white-space:nowrap;background:var(--white)}
+.prod-check:hover{border-color:var(--sage);color:var(--sage)}
+.prod-check.sel{background:var(--forest);color:#fff;border-color:var(--forest)}
+.fecha-row{display:flex;gap:8px}
+.fecha-row input,.fecha-row select{flex:1;border:1px solid rgba(90,122,58,.22);border-radius:9px;
+  padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--bark);
+  background:var(--white);outline:none;transition:border-color .18s}
+.fecha-row input:focus,.fecha-row select:focus{border-color:var(--sage)}
+.consulta-cta{background:linear-gradient(135deg,var(--forest),var(--sage));margin-top:4px}
+.consulta-cta:hover{opacity:.9}
+.err-msg{color:#c0392b;font-size:12px;margin-top:4px}
+.consulta-nota{text-align:center;font-size:11.5px;color:var(--stone);margin-top:10px;line-height:1.5}
+
+/* EVENTO MODAL */
+.admin-card{border-top:4px solid var(--gold)}
+.live-tag{display:inline-flex;align-items:center;gap:4px;background:#fff0f0;color:#c0392b;
+  border-radius:20px;padding:3px 11px;font-size:10.5px;font-weight:700;
+  letter-spacing:1px;margin-bottom:10px}
+.ev-meta{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--stone);margin-bottom:12px}
+.ev-desc{font-size:13.5px;color:var(--bark);line-height:1.6;margin-bottom:16px}
+.sorteo-box{background:linear-gradient(135deg,#faf5e8,#f5eed8);
+  border:1px solid rgba(200,169,110,.32);border-radius:var(--radius);padding:13px 15px;
+  display:flex;gap:11px;align-items:center;margin-bottom:16px}
+.sorteo-icon{font-size:27px}
+.sorteo-title{font-weight:600;color:var(--bark);font-size:13.5px}
+.sorteo-sub{font-size:11.5px;color:var(--stone);margin-top:2px}
+.admin-head{display:flex;gap:12px;align-items:center;margin-bottom:18px;font-size:26px}
+.ok-msg{color:var(--sage);font-size:13px;margin-top:6px}
+.divider{margin:18px 0;border:none;border-top:1px solid rgba(200,169,110,.18)}
+.section-title{font-weight:600;color:var(--bark);font-size:13px;margin-bottom:9px}
+.reg-list{max-height:165px;overflow-y:auto;font-size:12px;color:var(--stone);
+  border:1px solid var(--mist);border-radius:9px;padding:9px;margin-bottom:10px;line-height:1.85}
+
+/* RESPONSIVE */
+@media(max-width:540px){
+  .chat-window{border-radius:var(--radius);height:calc(100vh - 270px);min-height:300px}
+  .topbar-brand{display:none}
+  .header{padding:14px 14px 8px}
+  .social-row,.bottom-bar{padding-left:14px;padding-right:14px}
+  .social-btn{font-size:11.5px;padding:8px 8px}
+  .shop-btn,.event-btn{font-size:12px;padding:7px 11px}
+  .fecha-row{flex-direction:column}
+  .productos-grid .prod-check{font-size:11.5px;padding:4px 9px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span class="topbar-brand">🇨🇭 Swiss Just · Desde 1930</span>
+  <div class="topbar-social">
+    <a href="https://www.instagram.com/lorena_liffourrena/" target="_blank" rel="noopener" class="top-social ig">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
+    <a href="https://wa.me/5492966508751?text=Hola%20Lore!%20Vi%20tu%20bot%20y%20quiero%20consultar%20sobre%20productos%20Swiss%20Just%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="top-social wa">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-logo">
+    <div class="logo-circle">🌿</div>
+    <div class="logo-badge">✦</div>
+  </div>
+  <div class="header-brand">
+    <h1>Swiss Just</h1>
+    <p class="header-sub">ARGENTINA · BIENESTAR NATURAL</p>
+  </div>
+  <div class="header-right">
+    <div class="online-pill"><span class="pulse-dot"></span> En línea</div>
+    <div class="consultant-name">Consultora: <b>Lore</b></div>
+  </div>
+</header>
+
+<!-- SOCIAL BUTTONS -->
+<div class="social-row">
+  <button class="social-btn btn-consulta" id="btnConsulta">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Consultá a Lore
+  </button>
+  <a href="https://www.instagram.com/lorena_liffourrena/" target="_blank" rel="noopener" class="social-btn btn-ig">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    Instagram
+  </a>
+  <a href="https://wa.me/5492966508751?text=Hola%20Lore!%20Vi%20tu%20bot%20y%20quiero%20consultar%20sobre%20productos%20Swiss%20Just%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="social-btn btn-wa">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- CHAT -->
+<main class="chat-window">
+  <div class="messages" id="messages" role="log" aria-live="polite"></div>
+  <div class="input-row">
+    <input id="userInput" type="text" placeholder="Consultá sobre productos Swiss Just..." autocomplete="off">
+    <button class="send-btn" id="btnEnviar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</main>
+
+<!-- BOTTOM BAR -->
+<div class="bottom-bar">
+  <a href="https://viewer.ipaper.io/swiss-just/america/catalogos-web/web-catalogo-argentina/" target="_blank" rel="noopener" class="catalog-link">📖 Ver catálogo de productos</a>
+  <div class="bottom-right">
+    <button class="event-btn" id="btnEvento" style="display:none">
+      <span class="red-dot"></span>
+      <span id="eventoTxt">🎉 Próximo Evento</span>
+    </button>
+    <a href="https://www.justargentina.com/lorenaliffourrena" target="_blank" rel="noopener" class="shop-btn">
+      🛍️ ¡Vamos de compra!
+    </a>
+  </div>
+</div>
+
+<!-- MODAL CONSULTA -->
+<div class="modal-overlay" id="modalConsulta">
+  <div class="modal-card consulta-card">
+    <button class="modal-close" id="btnCerrarConsulta">✕</button>
+    <div id="consultaFormPanel">
+      <div class="consulta-header">
+        <div class="consulta-icon-wrap">🌿</div>
+        <div>
+          <h2 class="modal-title">Consultá con Lore</h2>
+          <p class="modal-desc">Completá el formulario y Lore te contacta para coordinar tu videollamada gratuita</p>
+        </div>
+      </div>
+      <div class="field">
+        <label>Tu nombre *</label>
+        <input type="text" id="cNombre" placeholder="Ej: María García" autocomplete="given-name">
+      </div>
+      <div class="field">
+        <label>¿Qué productos te interesan? *</label>
+        <div class="productos-grid" id="productosGrid"></div>
+        <input type="text" id="cOtros" placeholder="Otro producto que no está en la lista..." style="margin-top:8px;width:100%;border:1px solid rgba(90,122,58,.22);border-radius:9px;padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--bark);background:var(--white);outline:none">
+      </div>
+      <div class="field">
+        <label>¿Cuándo podés tener la videollamada? *</label>
+        <div class="fecha-row">
+          <input type="date" id="cFecha">
+          <select id="cHorario">
+            <option value="">— Horario —</option>
+            <option>Mañana (9-12hs)</option>
+            <option>Mediodía (12-15hs)</option>
+            <option>Tarde (15-18hs)</option>
+            <option>Noche (18-21hs)</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Tu WhatsApp o email para confirmar *</label>
+        <input type="text" id="cContacto" placeholder="+54 9 ... / tu@email.com">
+      </div>
+      <div class="field">
+        <label>Mensaje adicional (opcional)</label>
+        <textarea id="cMensaje" rows="2" placeholder="¿Alguna consulta o detalle extra?"></textarea>
+      </div>
+      <p class="err-msg" id="consultaErr" style="display:none">Por favor completá los campos obligatorios *</p>
+      <button class="modal-cta consulta-cta" id="btnEnviarConsulta">📅 Solicitar videollamada gratis →</button>
+      <p class="consulta-nota">✅ Gratuito · Sin compromiso · Lore te confirma por WhatsApp o email</p>
+    </div>
+    <div id="consultaOkPanel" style="display:none">
+      <div class="confirm-icon">🎉</div>
+      <h2 class="modal-title">¡Consulta enviada!</h2>
+      <p class="modal-desc">Lore recibió tu solicitud y te va a contactar para confirmar la videollamada. ¡Gracias por tu interés en Swiss Just! 🌿</p>
+      <div class="confirm-info" id="consultaResumen"></div>
+      <button class="modal-cta" id="btnOkConsulta">¡Perfecto, gracias! 🌿</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL EVENTO -->
+<div class="modal-overlay" id="modalEvento">
+  <div class="modal-card">
+    <button class="modal-close" id="btnCerrarEvento">✕</button>
+    <div id="eventoInfoPanel">
+      <span class="live-tag">🔴 LIVE</span>
+      <h2 class="modal-title" id="evTitulo">Evento Swiss Just</h2>
+      <div class="ev-meta">
+        <span id="evFecha">📅 Fecha por confirmar</span>
+        <span id="evPlataforma">📱 Plataforma por confirmar</span>
+      </div>
+      <p class="ev-desc" id="evDescripcion">Descripción del evento.</p>
+      <div class="sorteo-box">
+        <span class="sorteo-icon">🎁</span>
+        <div>
+          <div class="sorteo-title">¡Sorteo de regalo presente!</div>
+          <div class="sorteo-sub">Inscribite y entrá automáticamente</div>
+        </div>
+      </div>
+      <button class="modal-cta" id="btnVerFormEvento">¡Quiero participar! →</button>
+    </div>
+    <div id="eventoFormPanel" style="display:none">
+      <h2 class="modal-title">Inscribite al evento 🌿</h2>
+      <p class="modal-desc">Completá tus datos y entrás al sorteo del regalo presente</p>
+      <div class="field"><label>Nombre completo *</label><input type="text" id="eNombre" placeholder="Ej: María García"></div>
+      <div class="field"><label>WhatsApp *</label><input type="tel" id="eTelefono" placeholder="+54 9 ..."></div>
+      <div class="field"><label>Email</label><input type="email" id="eEmail" placeholder="tu@email.com"></div>
+      <div class="field">
+        <label>¿Cómo conociste a Lore?</label>
+        <select id="eOrigen">
+          <option value="">— Seleccioná —</option>
+          <option>Facebook</option><option>Instagram</option>
+          <option>Por una amiga</option><option>Ya soy clienta</option><option>Otro</option>
+        </select>
+      </div>
+      <label class="check-row"><input type="checkbox" id="eAcepto"> Acepto recibir info de productos Swiss Just de Lore</label>
+      <button class="modal-cta" id="btnInscribirEvento">🎁 ¡Me inscribo y entro al sorteo!</button>
+      <button class="btn-ghost" id="btnVolverEvento">← Volver</button>
+    </div>
+    <div id="eventoOkPanel" style="display:none">
+      <div class="confirm-icon">🎉</div>
+      <h2 class="modal-title">¡Estás inscripta!</h2>
+      <p class="modal-desc">Ya entraste al sorteo. Lore te va a contactar por WhatsApp para confirmarte.</p>
+      <div class="confirm-info">
+        <div>📅 <span id="evConfFecha"></span></div>
+        <div>📱 <span id="evConfPlat"></span></div>
+      </div>
+      <button class="modal-cta" id="btnCerrarEventoOk">¡Nos vemos en el live! 🌿</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL ADMIN -->
+<div class="modal-overlay" id="modalAdmin">
+  <div class="modal-card admin-card">
+    <button class="modal-close" id="btnCerrarAdmin">✕</button>
+    <div id="adminLoginPanel">
+      <div class="admin-head"><span>⚙️</span><div><h2 class="modal-title">Panel de Lore</h2><p class="modal-desc">Acceso exclusivo</p></div></div>
+      <div class="field"><label>Contraseña</label><input type="password" id="adminPass" placeholder="••••••"></div>
+      <button class="modal-cta" id="btnAdminLogin">Entrar →</button>
+      <p class="err-msg" id="adminErr" style="display:none">Contraseña incorrecta</p>
+    </div>
+    <div id="adminConfigPanel" style="display:none">
+      <div class="admin-head"><span>⚙️</span><div><h2 class="modal-title">Configurar Evento</h2></div></div>
+      <div class="field"><label>Título *</label><input type="text" id="aTitulo" placeholder="Ej: Live de Aromaterapia Swiss Just"></div>
+      <div class="field"><label>Descripción</label><textarea id="aDesc" rows="3" placeholder="¿De qué trata el evento?"></textarea></div>
+      <div class="field"><label>Fecha y hora</label><input type="datetime-local" id="aFecha"></div>
+      <div class="field">
+        <label>Plataforma</label>
+        <select id="aPlataforma"><option>Instagram Live</option><option>Facebook Live</option><option>Zoom</option><option>Google Meet</option><option>WhatsApp</option></select>
+      </div>
+      <div class="field"><label>Link del evento (opcional)</label><input type="url" id="aLink" placeholder="https://..."></div>
+      <label class="check-row"><input type="checkbox" id="aActivo" checked> Mostrar botón de evento en el bot</label>
+      <button class="modal-cta" id="btnGuardarEvento">💾 Guardar evento</button>
+      <p class="ok-msg" id="adminOk" style="display:none">✅ ¡Evento guardado!</p>
+      <hr class="divider">
+      <div class="section-title">📋 Inscriptas (<span id="totalInscriptas">0</span>)</div>
+      <div class="reg-list" id="listaInscriptas">Cargando...</div>
+      <button class="btn-ghost" id="btnExportarCSV">⬇️ Descargar CSV</button>
+    </div>
+  </div>
+</div>
+
+<div class="admin-access" id="btnAdmin">⚙</div>
+
+<script>
+// ════════════════════════════════════════════════
+// CATÁLOGO
+// ════════════════════════════════════════════════
+const CATALOG = [
+  {id:1,emoji:"🌿",cat:"Aromaterapia",name:"Óleo 31 — 20ml",desc:"El ícono suizo: 31 aceites esenciales puros",tags:["dolor de cabeza","migraña","músculos","estrés","circulación","resfriado","oleo"]},
+  {id:2,emoji:"🌿",cat:"Aromaterapia",name:"Óleo 31 — 50ml",desc:"Formato familiar del clásico suizo",tags:["dolor de cabeza","migraña","músculos","estrés","familia","oleo"]},
+  {id:3,emoji:"🍋",cat:"Aromaterapia",name:"Aceite Esencial de Eucalipto",desc:"Vías respiratorias y energía mental",tags:["resfriado","congestión","respiración","sinusitis","gripe"]},
+  {id:4,emoji:"💜",cat:"Aromaterapia",name:"Aceite Esencial de Lavanda",desc:"Relajación, sueño profundo y calma",tags:["sueño","insomnio","estrés","ansiedad","relajación"]},
+  {id:5,emoji:"🌱",cat:"Aromaterapia",name:"Aceite Esencial de Romero",desc:"Energía, concentración y circulación",tags:["energía","concentración","circulación","memoria","cabello"]},
+  {id:6,emoji:"🟢",cat:"Aromaterapia",name:"Aceite Esencial de Menta",desc:"Frescor, claridad mental y digestión",tags:["digestión","náuseas","cabeza","frescor","concentración"]},
+  {id:7,emoji:"🍊",cat:"Aromaterapia",name:"Aceite Esencial de Naranja",desc:"Alegría, energía y bienestar emocional",tags:["ánimo","alegría","energía","hogar"]},
+  {id:8,emoji:"🌸",cat:"Aromaterapia",name:"Aceite Esencial de Manzanilla",desc:"Calma, piel sensible y digestión suave",tags:["piel sensible","calma","digestión","niños"]},
+  {id:9,emoji:"🌺",cat:"Aromaterapia",name:"Aceite Esencial de Geranio",desc:"Equilibrio hormonal y piel radiante",tags:["hormonas","piel","equilibrio","mujer"]},
+  {id:10,emoji:"🍋",cat:"Aromaterapia",name:"Aceite Esencial de Bergamota",desc:"Uplifting natural para el estado de ánimo",tags:["ánimo","estrés","depresión","piel"]},
+  {id:11,emoji:"🍋",cat:"Aromaterapia",name:"Aceite Esencial de Limón",desc:"Purificante, energizante y antioxidante",tags:["energía","purificante","inmunidad"]},
+  {id:12,emoji:"🌿",cat:"Aromaterapia",name:"Aceite Esencial de Patchouli",desc:"Tierra, sensualidad y cuidado de la piel",tags:["piel","sensualidad","meditación"]},
+  {id:13,emoji:"💚",cat:"Aromaterapia",name:"Aceite Esencial de Tea Tree",desc:"Protección natural antibacteriana",tags:["antibacteriano","hongos","acné","piel"]},
+  {id:14,emoji:"🌿",cat:"Aromaterapia",name:"Revitalizador Guduchi",desc:"Bienestar general, defensas y vitalidad",tags:["defensas","inmunidad","vitalidad","energía"]},
+  {id:15,emoji:"✨",cat:"Aromaterapia",name:"Aceite Corporal Harmony+",desc:"Blend armonizante para cuerpo y mente",tags:["cuerpo","armonía","bienestar","masaje"]},
+  {id:16,emoji:"😌",cat:"Bienestar Emocional",name:"Anti-Stress Just",desc:"Fórmula suiza para calma y equilibrio emocional",tags:["estrés","ansiedad","nervios","relajación"]},
+  {id:17,emoji:"🌬️",cat:"Bienestar Emocional",name:"Esencia para Baño de Melisa",desc:"Baño relajante antiestrés con melisa",tags:["baño","estrés","relajación","ansiedad"]},
+  {id:18,emoji:"🌸",cat:"Bienestar Emocional",name:"Esencia para Baño de Sándalo",desc:"Relajación profunda y equilibrio emocional",tags:["baño","relajación","equilibrio","meditación"]},
+  {id:19,emoji:"🛁",cat:"Bienestar Emocional",name:"Espuma de Baño Hipérico & Bergamota",desc:"Baño revitalizante y antidepresivo natural",tags:["baño","ánimo","depresión","alegría"]},
+  {id:20,emoji:"🌬️",cat:"Bienestar Físico",name:"Eucasol Just",desc:"Spray de eucalipto para vías respiratorias",tags:["resfriado","tos","congestión","respiración","gripe"]},
+  {id:21,emoji:"🌱",cat:"Bienestar Físico",name:"Crema de Tomillo",desc:"Masajes en pecho y espalda — ideal en invierno",tags:["tos","bronquitis","gripe","pecho","invierno"]},
+  {id:22,emoji:"🛁",cat:"Bienestar Físico",name:"Esencia para Baño de Tomillo",desc:"Baño descongestionante y fortalecedor",tags:["baño","resfriado","bronquitis","invierno"]},
+  {id:23,emoji:"🌼",cat:"Bienestar Físico",name:"Gel Cremoso de Árnica",desc:"Alivia golpes, contusiones y dolor muscular",tags:["golpes","músculos","articulaciones","dolor","deporte"]},
+  {id:24,emoji:"💚",cat:"Bienestar Físico",name:"Gel Cremoso de Consuelda",desc:"Reconfortante tras el esfuerzo físico",tags:["músculos","articulaciones","deporte","flexibilidad"]},
+  {id:25,emoji:"🌲",cat:"Bienestar Físico",name:"Crema de Enebro",desc:"Calor muscular, flexibilidad y movimiento",tags:["músculos","articulaciones","calor","rigidez","masaje"]},
+  {id:26,emoji:"🌿",cat:"Bienestar Físico",name:"Crema San'Activ — Sales del Mar Muerto",desc:"Minerales del Mar Muerto para piel y músculos",tags:["piel","músculos","minerales"]},
+  {id:27,emoji:"🛁",cat:"Bienestar Físico",name:"Esencia para Baño de Enebro",desc:"Baño relajante muscular y articular",tags:["baño","músculos","relajación","articulaciones"]},
+  {id:28,emoji:"✋",cat:"Bienestar Físico",name:"Bálsamo para el Cuerpo",desc:"Base preparatoria para todos los masajes",tags:["masaje","cuerpo","preparación"]},
+  {id:29,emoji:"🌸",cat:"Bienestar Físico",name:"Espuma de Baño Flores de Heno & Edelweiss",desc:"Baño alpino purificante y reconfortante",tags:["baño","purificante","alpino"]},
+  {id:30,emoji:"💨",cat:"Bienestar Físico",name:"Hand Gel con Naranja y Flores de Tilo",desc:"Gel higienizante natural con aromas florales",tags:["higiene","manos","antibacteriano"]},
+  {id:31,emoji:"🏔️",cat:"Dermo-Cosmético",name:"Alpencreme",desc:"Crema nutritiva con hierbas de los Alpes suizos",tags:["piel","hidratación","nutrición","seca"]},
+  {id:32,emoji:"🌸",cat:"Dermo-Cosmético",name:"Crema de Manzanilla para Manos",desc:"Hidratación profunda para manos sensibles",tags:["manos","hidratación","sensible"]},
+  {id:33,emoji:"💜",cat:"Dermo-Cosmético",name:"Crema de Malva para el Rostro",desc:"Piel sensible e irritada — apta para niños",tags:["rostro","sensible","irritada","niños"]},
+  {id:34,emoji:"🫧",cat:"Dermo-Cosmético",name:"Crema de Tea Tree, Manuca y Rosalina",desc:"Cuidado profundo para piel con imperfecciones",tags:["acné","imperfecciones","piel grasa"]},
+  {id:35,emoji:"🌸",cat:"Dermo-Cosmético",name:"Crema de Lavanda",desc:"Suavidad y calma para piel reactiva",tags:["piel reactiva","suave","calmante","lavanda"]},
+  {id:36,emoji:"🌼",cat:"Dermo-Cosmético",name:"Crema de Caléndula",desc:"Regeneración y protección de la piel",tags:["regeneración","cicatrices","protección"]},
+  {id:37,emoji:"✨",cat:"Dermo-Cosmético",name:"Body Butter de Sándalo",desc:"Manteca corporal nutritiva y aromática",tags:["cuerpo","hidratación","nutritiva","sándalo"]},
+  {id:38,emoji:"🧴",cat:"Dermo-Cosmético",name:"Loción Cremosa de Malva",desc:"Hidratación corporal para pieles sensibles",tags:["cuerpo","hidratación","malva","sensible"]},
+  {id:39,emoji:"💆",cat:"Dermo-Cosmético",name:"Loción Cremosa de Almendras",desc:"Nutrición profunda y suavidad para el cuerpo",tags:["cuerpo","nutrición","almendras"]},
+  {id:40,emoji:"🌊",cat:"Dermo-Cosmético",name:"Espuma de Baño Algas Marinas & Té Verde",desc:"Detox marino para piel luminosa y firme",tags:["detox","algas","antioxidante"]},
+  {id:41,emoji:"🦵",cat:"Pies y Piernas",name:"Pedibalm — Loción para Piernas",desc:"Piernas cansadas, pesadas y con mala circulación",tags:["piernas","circulación","cansancio","varices"]},
+  {id:42,emoji:"🦶",cat:"Pies y Piernas",name:"Pedicream — Crema para los Pies",desc:"Hidratación y suavidad para pies agrietados",tags:["pies","talones","grietas","hidratación"]},
+  {id:43,emoji:"💨",cat:"Pies y Piernas",name:"Pedibon Spray — Desodorante para Pies",desc:"Frescura y protección natural para los pies",tags:["pies","desodorante","frescura"]},
+  {id:44,emoji:"🌊",cat:"Pies y Piernas",name:"Pedibath — Baño para Pies",desc:"Relax y cuidado completo para tus pies",tags:["pies","baño","relajación"]},
+  {id:45,emoji:"🫧",cat:"Pies y Piernas",name:"Pediscrub — Exfoliante para Pies",desc:"Elimina durezas y suaviza la planta del pie",tags:["pies","exfoliante","durezas"]},
+  {id:46,emoji:"💚",cat:"Pies y Piernas",name:"Venen Gel — Gel para Piernas",desc:"Gel refrescante para piernas con varices o cansancio",tags:["varices","piernas","circulación","frescor"]},
+  {id:47,emoji:"💆",cat:"Cuidado Capilar",name:"Shampoo de Tea Tree, Manuca y Rosalina",desc:"Cuero cabelludo con caspa o irritación",tags:["caspa","cuero cabelludo","irritación"]},
+  {id:48,emoji:"🌿",cat:"Cuidado Capilar",name:"Shampoo San'Activ",desc:"Cabello graso con volumen y frescura",tags:["cabello graso","volumen","frescura"]},
+  {id:49,emoji:"🌱",cat:"Cuidado Capilar",name:"Shampoo Capilar con Nim",desc:"Anti-caída y fortalecimiento del cabello",tags:["caída","cabello débil","fortalecimiento"]},
+  {id:50,emoji:"✨",cat:"Cuidado Capilar",name:"Máscara Capilar con Arándanos",desc:"Hidratación profunda y brillo para el cabello",tags:["cabello seco","brillo","hidratación"]},
+  {id:51,emoji:"⭐",cat:"Vital Just",name:"Vital Just — Gel Limpiador",desc:"Limpieza facial suave y eficaz",tags:["limpieza","facial","poros"]},
+  {id:52,emoji:"⭐",cat:"Vital Just",name:"Vital Just — Crema Hidratante de Día FPS15",desc:"Hidratación diaria con protección solar",tags:["hidratación","día","FPS","facial","antiedad"]},
+  {id:53,emoji:"⭐",cat:"Vital Just",name:"Vital Just — Crema de Noche Redensificante",desc:"Regeneración nocturna y firmeza de la piel",tags:["noche","antiedad","firmeza","regeneración"]},
+  {id:54,emoji:"⭐",cat:"Vital Just",name:"Vital Just — Sérum Reparador",desc:"Tratamiento intensivo antiedad de alta eficacia",tags:["antiedad","arrugas","sérum","intensivo"]},
+  {id:55,emoji:"⭐",cat:"Vital Just",name:"Vital Just — Mascarilla Renovación Intensiva",desc:"Renovación celular para piel luminosa",tags:["mascarilla","luminosidad","renovación","antiedad"]},
+  {id:56,emoji:"⭐",cat:"Vital Just",name:"Vital Just — Crema Contorno de Ojos y Labios",desc:"Trata las zonas más delicadas del rostro",tags:["ojos","labios","contorno","antiedad"]},
+  {id:57,emoji:"💪",cat:"Cellfit",name:"Gel Anti-Celulitis de Día Cellfit",desc:"Tratamiento reductor y reafirmante de día",tags:["celulitis","reafirmante","reductor"]},
+  {id:58,emoji:"💪",cat:"Cellfit",name:"Crema Anti-Celulitis de Noche Cellfit",desc:"Acción drenante y remodeladora nocturna",tags:["celulitis","noche","drenante"]},
+  {id:59,emoji:"💪",cat:"Cellfit",name:"Crema Exfoliante Corporal Cellfit",desc:"Exfolia y activa la circulación para reducir celulitis",tags:["celulitis","exfoliante","circulación"]},
+  {id:60,emoji:"💪",cat:"Cellfit",name:"Crema Reafirmante para el Busto Cellfit",desc:"Firmeza y tonicidad para el escote y busto",tags:["busto","firmeza","escote"]},
+];
+
+// ════════════════════════════════════════════════
+// CONFIG
+// ════════════════════════════════════════════════
+const WA_NUM   = '5492966508751';
+const WA_MSG   = 'Hola%20Lore!%20Vi%20tu%20bot%20y%20quiero%20consultar%20sobre%20productos%20Swiss%20Just%20%F0%9F%8C%BF';
+const IG_URL   = 'https://www.instagram.com/lorena_liffourrena/';
+const STORE_URL= 'https://www.justargentina.com/lorenaliffourrena';
+const EMAIL    = 'Liffourrenalorena@gmail.com';
+const ADMIN_PW = 'lore2025';
+const EV_KEY   = 'swjust_ev3';
+const REG_KEY  = 'swjust_reg3';
+
+// ════════════════════════════════════════════════
+// ESTADO
+// ════════════════════════════════════════════════
+let aiHistory  = [];
+let isSending  = false;
+
+// ════════════════════════════════════════════════
+// SYSTEM PROMPT
+// ════════════════════════════════════════════════
+const SYSTEM = `Sos Noa, la asistente virtual de Lore Liffourrena, Consultora oficial de Swiss Just Argentina.
+Experta en aromaterapia y bienestar natural. Hablás en español rioplatense (vos, tenés, consultá).
+Tono: cálido, cercano, como una amiga experta. Respuestas cortas: máx 3-4 líneas.
+
+CATÁLOGO (60 productos):
+${CATALOG.map(p=>`[ID:${p.id}] ${p.name} (${p.cat}): ${p.desc}`).join('\n')}
+
+SOBRE SWISS JUST: Marca suiza fundada en 1930. Productos 100% naturales. El Óleo 31 es el producto estrella.
+
+CONTACTO DE LORE:
+- WhatsApp: +54 9 2966 50-8751
+- Instagram: @lorena_liffourrena
+- Email: ${EMAIL}
+- Tienda: ${STORE_URL}
+
+REGLAS:
+1. Español rioplatense, tono cálido.
+2. Para mostrar productos escribí [SHOW:id1,id2,id3,id4] (máx 4 IDs).
+3. NUNCA menciones precios — Lore los informa personalmente.
+4. Para compras dirigí siempre a la tienda o WhatsApp de Lore.
+5. No hagas afirmaciones médicas.`;
+
+// ════════════════════════════════════════════════
+// HELPERS DOM
+// ════════════════════════════════════════════════
+function eid(id){ return document.getElementById(id); }
+function msgs(){ return eid('messages'); }
+function scrollDown(){ setTimeout(()=>{ msgs().scrollTop = msgs().scrollHeight; },50); }
+
+function addBotMsg(html){
+  const w=document.createElement('div'); w.className='msg bot';
+  const av=document.createElement('div'); av.className='avatar'; av.textContent='🌿';
+  const b=document.createElement('div'); b.className='bubble'; b.innerHTML=html;
+  w.appendChild(av); w.appendChild(b); msgs().appendChild(w); scrollDown();
+}
+function addUserMsg(text){
+  const w=document.createElement('div'); w.className='msg user';
+  const av=document.createElement('div'); av.className='avatar'; av.textContent='👤';
+  const b=document.createElement('div'); b.className='bubble'; b.textContent=text;
+  w.appendChild(av); w.appendChild(b); msgs().appendChild(w); scrollDown();
+}
+function appendExtra(el){
+  const w=document.createElement('div'); w.className='msg bot';
+  const b=document.createElement('div'); b.className='bubble';
+  b.style.cssText='background:transparent;border:none;padding:2px 0 0 36px';
+  b.appendChild(el); w.appendChild(b); msgs().appendChild(w); scrollDown();
+}
+function showTyping(){
+  const w=document.createElement('div'); w.className='msg bot typing'; w.id='typing';
+  const av=document.createElement('div'); av.className='avatar'; av.textContent='🌿';
+  const b=document.createElement('div'); b.className='bubble';
+  b.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';
+  w.appendChild(av); w.appendChild(b); msgs().appendChild(w); scrollDown();
+}
+function removeTyping(){ const t=eid('typing'); if(t) t.remove(); }
+
+// ════════════════════════════════════════════════
+// TARJETAS DE PRODUCTOS
+// ════════════════════════════════════════════════
+function makeCards(ids){
+  const scroll=document.createElement('div'); scroll.className='product-scroll';
+  ids.forEach(id=>{
+    const p=CATALOG.find(x=>x.id===id); if(!p) return;
+    const card=document.createElement('div');
+    card.className='p-card'; card.dataset.cardId=p.id;
+    card.innerHTML=`<div class="p-emoji">${p.emoji}</div>
+      <div class="p-cat">${p.cat}</div>
+      <div class="p-name">${p.name}</div>
+      <div class="p-desc">${p.desc}</div>
+      <button class="p-add" data-wa-prod="${p.id}">+ Ver más</button>`;
+    scroll.appendChild(card);
+  });
+  return scroll;
+}
+
+// ════════════════════════════════════════════════
+// QUICK REPLIES
+// ════════════════════════════════════════════════
+const QR_MAP = {
+  '🌿 ¿Qué es el Óleo 31?':         {ids:[1,2],msg:'El <b>Óleo 31</b> es el producto ícono de Swiss Just — 31 aceites esenciales puros para dolores, circulación, músculos y más 🌿'},
+  '😌 Estrés y ansiedad':            {ids:[16,17,4,18],msg:'Para el estrés y ansiedad, Swiss Just tiene productos increíbles con aceites esenciales que calman de forma natural 🌿'},
+  '🤕 Dolores musculares':           {ids:[23,24,25,28],msg:'Para dolores musculares y articulares, estos son los productos más recomendados por Lore 💪'},
+  '😴 Mejorar el sueño':            {ids:[4,17,18,16],msg:'Para dormir mejor, Lavanda, Melisa y Sándalo son los favoritos de aromaterapia suiza 🌙'},
+  '✨ Cuidado facial antiedad':      {ids:[52,53,54,56],msg:'La línea <b>Vital Just</b> es el tratamiento facial premium de Swiss Just para piel firme y luminosa ✨'},
+  '🌬️ Resfriado y tos':            {ids:[20,21,3,22],msg:'Para resfriados y problemas respiratorios, el Eucasol es el más pedido en invierno 🌿'},
+  '💆 Cuidado de la piel':          {ids:[31,33,36,37],msg:'Cremas con extractos de plantas alpinas suizas que hidratan y nutren profundamente 🌸'},
+  '💪 Deportes y actividad física': {ids:[23,24,25,26],msg:'Productos ideales antes y después del entrenamiento 💪'},
+  '🦵 Piernas cansadas':            {ids:[41,46,44,42],msg:'Para piernas cansadas o con mala circulación, la línea <b>Pedi</b> y el Venen Gel son excelentes 🦵'},
+  '💇 Cuidado del cabello':         {ids:[47,49,50,48],msg:'Shampoos y tratamientos naturales para distintos tipos de cabello 💆'},
+  '🧴 Anti-celulitis':              {ids:[57,58,59,60],msg:'La línea <b>Cellfit</b> combate la celulitis y reafirma la piel de forma natural 💪'},
+  '💬 Contactar a Lore':            {ids:null,msg:null},
+};
+
+function makeQR(opts){
+  const wrap=document.createElement('div'); wrap.className='quick-wrap';
+  opts.forEach(opt=>{
+    const btn=document.createElement('button');
+    btn.className='qr'; btn.type='button'; btn.textContent=opt; btn.dataset.qr=opt;
+    wrap.appendChild(btn);
+  });
+  return wrap;
+}
+
+function handleQR(opt){
+  if(opt.includes('Contactar')||opt.includes('Lore')){ showContactMsg(); return; }
+  const entry=QR_MAP[opt];
+  if(!entry){ doSend(opt); return; }
+  if(entry.msg) addBotMsg(entry.msg);
+  if(entry.ids&&entry.ids.length) appendExtra(makeCards(entry.ids));
+  setTimeout(()=>{
+    addBotMsg(`¿Te interesa alguno? Consultá directamente con <b>Lore</b> 💬<br><br>`+
+      `<a href="https://wa.me/${WA_NUM}?text=${WA_MSG}" target="_blank" rel="noopener" class="link-btn teal">💬 WhatsApp</a>`+
+      `&nbsp;&nbsp;<a href="mailto:${EMAIL}" class="link-btn green">✉️ Email</a>`);
+  },200);
+}
+
+function showContactMsg(){
+  addBotMsg(`Para consultas y pedidos, contactá a <b>Lore</b> 🌿<br><br>`+
+    `<a href="https://wa.me/${WA_NUM}?text=${WA_MSG}" target="_blank" rel="noopener" class="link-btn teal">💬 WhatsApp: +54 9 2966 50-8751</a><br><br>`+
+    `<a href="${IG_URL}" target="_blank" rel="noopener" style="color:var(--sage);font-weight:500">📸 Instagram: @lorena_liffourrena</a><br>`+
+    `<a href="mailto:${EMAIL}" style="color:var(--sage);font-weight:500">✉️ ${EMAIL}</a><br><br>`+
+    `¡Te asesora sin compromiso! 🌿`);
+}
+
+// ════════════════════════════════════════════════
+// LLAMADA A LA IA
+// ════════════════════════════════════════════════
+async function callAI(text){
+  aiHistory.push({role:'user',content:text});
+  const res=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'x-api-key':'sk-ant-TU_KEY_AQUI',
+      'anthropic-version':'2023-06-01',
+      'anthropic-dangerous-direct-browser-access':'true',
+    },
+    body:JSON.stringify({
+      model:'claude-sonnet-4-20250514',
+      max_tokens:1000,
+      system:SYSTEM,
+      messages:aiHistory,
+    }),
+  });
+  if(!res.ok) throw new Error('HTTP '+res.status);
+  const data=await res.json();
+  const reply=data.content.map(b=>b.text||'').join('');
+  aiHistory.push({role:'assistant',content:reply});
+  return reply;
+}
+
+function parseAI(raw){
+  let text=raw;
+  const m=text.match(/\[SHOW:([\d,]+)\]/);
+  if(m){
+    const ids=m[1].split(',').map(Number).filter(id=>CATALOG.find(p=>p.id===id));
+    if(ids.length) appendExtra(makeCards(ids));
+    text=text.replace(m[0],'').trim();
+  }
+  if(text.trim()) addBotMsg(text.trim());
+}
+
+// ════════════════════════════════════════════════
+// ENVIAR MENSAJE
+// ════════════════════════════════════════════════
+async function doSend(override){
+  if(isSending) return;
+  const inp=eid('userInput');
+  const text=(override||inp.value).trim();
+  if(!text) return;
+  inp.value='';
+  isSending=true; eid('btnEnviar').disabled=true;
+  addUserMsg(text);
+  const t=text.toLowerCase();
+  if(t.includes('contactar')||t.includes('precio')||t.includes('comprar')||t.includes('whatsapp')){
+    showContactMsg(); isSending=false; eid('btnEnviar').disabled=false; return;
+  }
+  showTyping();
+  try{
+    const reply=await callAI(text);
+    removeTyping(); parseAI(reply);
+  }catch(e){
+    removeTyping();
+    addBotMsg('Disculpá, hubo un problema de conexión. Contactá directamente a <b>Lore</b> 💬<br><br>'+
+      `<a href="https://wa.me/${WA_NUM}?text=${WA_MSG}" target="_blank" class="link-btn teal">💬 WhatsApp de Lore</a>`);
+  }
+  isSending=false; eid('btnEnviar').disabled=false;
+}
+
+// ════════════════════════════════════════════════
+// FORMULARIO DE CONSULTA
+// ════════════════════════════════════════════════
+const INTERESES=[
+  '🌿 Óleo 31','😌 Estrés y ansiedad','🤕 Dolores musculares','😴 Sueño y relajación',
+  '✨ Cuidado facial antiedad','🌬️ Resfriado y tos','💆 Cuidado de la piel',
+  '💪 Deportes','🦵 Piernas cansadas','💇 Cuidado del cabello',
+  '🧴 Anti-celulitis','🛁 Baños relajantes','🦶 Cuidado de pies','👶 Piel sensible',
+];
+
+function buildGrid(){
+  const grid=eid('productosGrid');
+  if(!grid||grid.children.length>0) return;
+  INTERESES.forEach(item=>{
+    const lbl=document.createElement('label');
+    lbl.className='prod-check'; lbl.dataset.val=item;
+    lbl.innerHTML=`<input type="checkbox" style="display:none"> ${item}`;
+    lbl.addEventListener('click',function(e){
+      e.preventDefault();
+      this.classList.toggle('sel');
+    });
+    grid.appendChild(lbl);
+  });
+  const hoy=new Date().toISOString().split('T')[0];
+  eid('cFecha').min=hoy;
+}
+
+function openConsulta(){
+  eid('consultaFormPanel').style.display='block';
+  eid('consultaOkPanel').style.display='none';
+  eid('consultaErr').style.display='none';
+  buildGrid();
+  eid('modalConsulta').classList.add('open');
+}
+function closeConsulta(){ eid('modalConsulta').classList.remove('open'); }
+
+function submitConsulta(){
+  const nombre=eid('cNombre').value.trim();
+  const fecha=eid('cFecha').value;
+  const contacto=eid('cContacto').value.trim();
+  const seleccionados=Array.from(document.querySelectorAll('#productosGrid .prod-check.sel')).map(l=>l.dataset.val);
+  const otros=eid('cOtros').value.trim();
+  if(otros) seleccionados.push(otros);
+  if(!nombre||!fecha||!contacto){ eid('consultaErr').style.display='block'; return; }
+  eid('consultaErr').style.display='none';
+  const productos=seleccionados.join(', ')||'No especificado';
+  const horario=eid('cHorario').value||'Sin preferencia';
+  const mensaje=eid('cMensaje').value.trim();
+  const fechaFmt=new Date(fecha+'T00:00:00').toLocaleDateString('es-AR');
+  const waText=encodeURIComponent(
+    `📋 Nueva consulta desde el bot:\n\n`+
+    `👤 Nombre: ${nombre}\n`+
+    `📦 Productos: ${productos}\n`+
+    `📅 Fecha videollamada: ${fechaFmt}\n`+
+    `🕐 Horario: ${horario}\n`+
+    `📱 Contacto: ${contacto}\n`+
+    (mensaje?`💬 Mensaje: ${mensaje}`:'')
+  );
+  window.open(`https://wa.me/${WA_NUM}?text=${waText}`,'_blank');
+  eid('consultaResumen').innerHTML=
+    `<div>👤 <b>${nombre}</b></div>`+
+    `<div>📦 ${productos}</div>`+
+    `<div>📅 ${fechaFmt} · ${horario}</div>`;
+  eid('consultaFormPanel').style.display='none';
+  eid('consultaOkPanel').style.display='block';
+  addBotMsg(`📅 ¡<b>${nombre}</b>, tu consulta fue enviada a Lore! Te va a contactar para confirmar la videollamada 🌿`);
+}
+
+// ════════════════════════════════════════════════
+// EVENTO
+// ════════════════════════════════════════════════
+function loadEvento(){
+  try{
+    const ev=JSON.parse(localStorage.getItem(EV_KEY)||'null');
+    if(!ev||!ev.activo) return;
+    eid('btnEvento').style.display='flex';
+    if(ev.titulo){ eid('eventoTxt').textContent='🎉 '+ev.titulo; eid('evTitulo').textContent=ev.titulo; }
+    if(ev.desc) eid('evDescripcion').textContent=ev.desc;
+    if(ev.fecha){
+      const fmt=new Date(ev.fecha).toLocaleString('es-AR',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'});
+      eid('evFecha').textContent='📅 '+fmt; eid('evConfFecha').textContent=fmt;
+    }
+    if(ev.plataforma){ eid('evPlataforma').textContent='📱 '+ev.plataforma; eid('evConfPlat').textContent=ev.plataforma; }
+  }catch(e){}
+}
+
+function showEvPanel(id){
+  ['eventoInfoPanel','eventoFormPanel','eventoOkPanel'].forEach(p=>{
+    const el=eid(p); if(el) el.style.display=p===id?'block':'none';
+  });
+}
+function openEvento(){ showEvPanel('eventoInfoPanel'); eid('modalEvento').classList.add('open'); }
+function closeEvento(){ eid('modalEvento').classList.remove('open'); }
+
+function submitEvento(){
+  const nombre=eid('eNombre').value.trim();
+  const tel=eid('eTelefono').value.trim();
+  if(!nombre||!tel){ alert('Completá nombre y WhatsApp 🙏'); return; }
+  try{
+    const regs=JSON.parse(localStorage.getItem(REG_KEY)||'[]');
+    regs.push({nombre,tel,email:eid('eEmail').value.trim(),origen:eid('eOrigen').value,acepto:eid('eAcepto').checked,fecha:new Date().toLocaleString('es-AR')});
+    localStorage.setItem(REG_KEY,JSON.stringify(regs));
+  }catch(e){}
+  showEvPanel('eventoOkPanel');
+  addBotMsg(`🎉 ¡<b>${nombre}</b>, ya estás inscripta y entraste al sorteo! Lore te va a contactar por WhatsApp 🌿`);
+}
+
+// ════════════════════════════════════════════════
+// ADMIN
+// ════════════════════════════════════════════════
+function openAdmin(){
+  eid('adminLoginPanel').style.display='block';
+  eid('adminConfigPanel').style.display='none';
+  eid('adminPass').value='';
+  eid('adminErr').style.display='none';
+  eid('modalAdmin').classList.add('open');
+}
+function closeAdmin(){ eid('modalAdmin').classList.remove('open'); }
+
+function doAdminLogin(){
+  if(eid('adminPass').value===ADMIN_PW){
+    eid('adminLoginPanel').style.display='none';
+    eid('adminConfigPanel').style.display='block';
+    loadAdminPanel();
+  }else{ eid('adminErr').style.display='block'; }
+}
+
+function loadAdminPanel(){
+  try{
+    const ev=JSON.parse(localStorage.getItem(EV_KEY)||'null');
+    if(ev){
+      if(ev.titulo) eid('aTitulo').value=ev.titulo;
+      if(ev.desc)   eid('aDesc').value=ev.desc;
+      if(ev.fecha)  eid('aFecha').value=ev.fecha;
+      if(ev.plataforma) eid('aPlataforma').value=ev.plataforma;
+      if(ev.link)   eid('aLink').value=ev.link;
+      eid('aActivo').checked=!!ev.activo;
+    }
+    const regs=JSON.parse(localStorage.getItem(REG_KEY)||'[]');
+    eid('totalInscriptas').textContent=regs.length;
+    eid('listaInscriptas').innerHTML=regs.length
+      ?regs.map((r,i)=>`<div style="border-bottom:1px solid #f0ebe0;padding:3px 0"><b>${i+1}. ${r.nombre}</b> — ${r.tel}${r.email?' · '+r.email:''} <span style="color:#aaa;font-size:10.5px">(${r.fecha})</span></div>`).join('')
+      :'<em>Aún no hay inscriptas.</em>';
+  }catch(e){}
+}
+
+function guardarEvento(){
+  const ev={titulo:eid('aTitulo').value.trim(),desc:eid('aDesc').value.trim(),
+    fecha:eid('aFecha').value,plataforma:eid('aPlataforma').value,
+    link:eid('aLink').value.trim(),activo:eid('aActivo').checked};
+  localStorage.setItem(EV_KEY,JSON.stringify(ev));
+  eid('adminOk').style.display='block';
+  setTimeout(()=>{ eid('adminOk').style.display='none'; closeAdmin(); loadEvento(); },1400);
+}
+
+function exportarCSV(){
+  try{
+    const regs=JSON.parse(localStorage.getItem(REG_KEY)||'[]');
+    if(!regs.length){ alert('No hay inscriptas aún.'); return; }
+    const csv=['Nombre,WhatsApp,Email,Origen,Fecha,Acepta',
+      ...regs.map(r=>`"${r.nombre}","${r.tel}","${r.email}","${r.origen}","${r.fecha}","${r.acepto?'Sí':'No'}"`)
+    ].join('\n');
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+    a.download='inscriptas-swiss-just.csv'; a.click();
+  }catch(e){ alert('Error al exportar.'); }
+}
+
+// ════════════════════════════════════════════════
+// BIENVENIDA
+// ════════════════════════════════════════════════
+function welcome(){
+  setTimeout(()=>{
+    addBotMsg(`¡Hola! Soy <b>Noa</b> 🌿, la asistente de <b>Lore Liffourrena</b>, Consultora oficial Swiss Just Argentina.<br><br>`+
+      `Podés preguntarme sobre nuestros productos naturales suizos, o ir al `+
+      `<a href="${STORE_URL}" target="_blank" rel="noopener" style="color:var(--sage);font-weight:500">catálogo de productos</a> `+
+      `para comenzar a disfrutar. ¿En qué te puedo ayudar?`);
+    setTimeout(()=>{
+      appendExtra(makeQR([
+        '🌿 ¿Qué es el Óleo 31?','😌 Estrés y ansiedad','🤕 Dolores musculares',
+        '😴 Mejorar el sueño','✨ Cuidado facial antiedad','🌬️ Resfriado y tos',
+        '💆 Cuidado de la piel','💪 Deportes y actividad física','🦵 Piernas cansadas',
+        '💇 Cuidado del cabello','🧴 Anti-celulitis','💬 Contactar a Lore',
+      ]));
+    },350);
+  },400);
+}
+
+// ════════════════════════════════════════════════
+// EVENT DELEGATION — UN SOLO LISTENER PARA TODO
+// ════════════════════════════════════════════════
+document.addEventListener('click',function(e){
+
+  // Quick replies
+  const qrEl=e.target.closest('[data-qr]');
+  if(qrEl&&!qrEl.dataset.waProdu&&!qrEl.dataset.cardId){
+    e.preventDefault();
+    const opt=qrEl.dataset.qr;
+    const wrap=qrEl.closest('.quick-wrap');
+    if(wrap) wrap.querySelectorAll('[data-qr]').forEach(b=>{b.disabled=true;b.style.opacity='.45';});
+    addUserMsg(opt);
+    handleQR(opt);
+    return;
+  }
+
+  // Botón "Ver más" en tarjeta → abre WhatsApp
+  const waProd=e.target.closest('[data-wa-prod]');
+  if(waProd){
+    e.preventDefault(); e.stopPropagation();
+    const p=CATALOG.find(x=>x.id===parseInt(waProd.dataset.waProd));
+    if(p) window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent('Hola Lore! Me interesa: '+p.name+' 🌿')}`,'_blank');
+    return;
+  }
+
+  // Click en tarjeta → consulta a IA
+  const cardEl=e.target.closest('[data-card-id]');
+  if(cardEl&&!e.target.closest('[data-wa-prod]')){
+    e.preventDefault();
+    const p=CATALOG.find(x=>x.id===parseInt(cardEl.dataset.cardId));
+    if(p) doSend('Contame más sobre '+p.name);
+    return;
+  }
+
+  // Overlay click → cerrar modal
+  if(e.target.id==='modalConsulta'){ closeConsulta(); return; }
+  if(e.target.id==='modalEvento'){   closeEvento();   return; }
+  if(e.target.id==='modalAdmin'){    closeAdmin();    return; }
+
+},true);
+
+// ════════════════════════════════════════════════
+// INIT — TODO dentro de DOMContentLoaded
+// ════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded',function(){
+
+  // Botón consulta
+  eid('btnConsulta').addEventListener('click', openConsulta);
+  eid('btnCerrarConsulta').addEventListener('click', closeConsulta);
+  eid('btnEnviarConsulta').addEventListener('click', submitConsulta);
+  eid('btnOkConsulta').addEventListener('click', closeConsulta);
+
+  // Chat
+  eid('btnEnviar').addEventListener('click', ()=>doSend());
+  eid('userInput').addEventListener('keydown', function(e){ if(e.key==='Enter') doSend(); });
+
+  // Evento
+  eid('btnEvento').addEventListener('click', openEvento);
+  eid('btnCerrarEvento').addEventListener('click', closeEvento);
+  eid('btnVerFormEvento').addEventListener('click', ()=>showEvPanel('eventoFormPanel'));
+  eid('btnInscribirEvento').addEventListener('click', submitEvento);
+  eid('btnVolverEvento').addEventListener('click', ()=>showEvPanel('eventoInfoPanel'));
+  eid('btnCerrarEventoOk').addEventListener('click', closeEvento);
+
+  // Admin
+  eid('btnAdmin').addEventListener('click', openAdmin);
+  eid('btnCerrarAdmin').addEventListener('click', closeAdmin);
+  eid('btnAdminLogin').addEventListener('click', doAdminLogin);
+  eid('adminPass').addEventListener('keydown', function(e){ if(e.key==='Enter') doAdminLogin(); });
+  eid('btnGuardarEvento').addEventListener('click', guardarEvento);
+  eid('btnExportarCSV').addEventListener('click', exportarCSV);
+
+  // Escape cierra cualquier modal
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ closeConsulta(); closeEvento(); closeAdmin(); }
+  });
+
+  // Arranque
+  loadEvento();
+  welcome();
+});
+</script>
+</body>
+</html>
